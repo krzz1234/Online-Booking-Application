@@ -1,0 +1,52 @@
+<html>
+<head>
+	<style>
+body {
+  background-image: url('/static/airplane5.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+	th,td{
+		background-color: floralwhite;
+	}
+</style>
+</head>
+
+<body>
+<h1>Cancelation of Booking</h1>
+
+<h2>Booking for {{flight.name}}</h2>
+<h2> Reference Number = {{flight.id}}</h2>
+<h2>Your Booking has been Canceled</h2>
+
+<table border='1'>
+	<tr>
+		<th>Reference Number</th>
+		<th>Departure</th>
+		<th>Destination</th>
+		<th>Flight Name</th>
+		<th>Capacity</th>
+		<th>Date</th>
+		<th>Departure Time</th>
+		<th>Arrival Time</th>
+		<th>Price</th>
+		<th>Flight ID</th>
+	</tr>
+
+	<tr>
+		<td>{{flight.id}}</td>
+		<td>{{flight.departure}}</td>
+		<td>{{flight.destination}}</td>
+		<td>{{flight.flightName}}</td>
+		<td>{{flight.capacity}}</td>
+		<td>{{flight.date}}</td>
+		<td>{{flight.departureTime}}</td>
+		<td>{{flight.arrivalTime}}</td>
+		<td>{{flight.price}}</td>
+		<td>{{flight.scheduleID}}</td>
+	</tr>
+</table>
+<a href="/">Go Back to Main Page</a>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+<head>
+	<style>
+body {
+  background-image: url('/static/airplane2.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
+</head>
+
+<body>
+<h1>Reference</h1>
+
+<h2>Please enter your booking reference number</h2>
+
+<form action="searchreference/" method="post">
+{% csrf_token %}
+Reference Number:<br>
+<input name="reference">
+<br><br>
+<input type="submit" value="Submit">
+</form>
+<a href="/">Go Back to Main Page</a>
+</body>
+</html>

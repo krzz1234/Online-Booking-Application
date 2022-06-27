@@ -1,0 +1,81 @@
+<html>
+<head>
+	<style>
+	body {
+	  background-image: url('/static/sky3.jpg');
+	  background-repeat: no-repeat;
+	  background-attachment: fixed;
+	  background-size: 100% 100%;
+	}
+	th,td{
+		background-color: floralwhite;
+	}
+</style>
+</head>
+
+<body>
+<h1>Booking Detail</h1>
+
+<form action="addrecord/{{ flight.id }}" method="post">
+	{% csrf_token %}
+<table border='1'>
+	<tr>
+		<th>ID</th>
+		<th>Departure</th>
+		<th>Destination</th>
+		<th>Flight Name</th>
+		<th>Capacity</th>
+		<th>Date</th>
+		<th>Departure Time</th>
+		<th>Arrival Time</th>
+		<th>Price</th>
+	</tr>
+
+	<tr>
+		<td>{{flight.id}}</td>
+		<td>{{flight.departure}}</td>
+		<td>{{flight.destination}}</td>
+		<td>{{flight.flightName}}</td>
+		<td>{{flight.capacity}}</td>
+		<td>{{flight.date}}</td>
+		<td>{{flight.departureTime}}</td>
+		<td>{{flight.arrivalTime}}</td>
+		<td>{{flight.price}}</td>
+	</tr>
+</table>
+
+<br>Enter Name:<br>
+<input name="name">
+<br><br>
+Flight ID:<br>
+<input name="scheduleID" value={{flight.id}} readonly>
+<br><br>
+Departure:<br>
+<input name="departure" value={{flight.departure}} readonly>
+<br><br>
+Destination:<br>
+<input name="destination" value={{flight.destination}} readonly>
+<br><br>
+Flight Name:<br>
+<input name="flightname" value={{flight.flightName}} readonly>
+<br><br>
+Number of Passengers:<br>
+<input name="capacity" value=1 readonly>
+<br><br>
+Date:<br>
+<input name="date" value={{flight.date}} readonly>
+<br><br>
+Departure Time:<br>
+<input name="departuretime" value={{flight.departureTime}} readonly>
+<br><br>
+Arrival Time:<br>
+<input name="arrivaltime" value={{flight.arrivalTime}} readonly>
+<br><br>
+Price:<br>
+<input name="price" value={{flight.price}} readonly>
+<br><br>
+<input type="submit" value="Book a flight">
+</form>
+<a href="/">Go Back to Main Page</a>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+<head>
+<style>
+body {
+  background-image: url('/static/airplane.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
+</head>
+
+<body>
+<h1>Please Enter a Date</h1>
+
+<form action="searched/" method="post">
+{% csrf_token %}
+Date:<br>
+<input name="date" placeholder="YYYY-MM-DD">
+<br><br>
+<input type="submit" value="Submit">
+</form>
+</body>
+<a href="/">Go Back to Main Page</a>
+</html>

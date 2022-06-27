@@ -1,0 +1,31 @@
+<html>
+<head>
+<style>
+body {
+  background-image: url('/static/airplane.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
+</head>
+
+<body>
+<h1>Please Enter Desired Destination</h1>
+<h2>Lists of Destinations</h2>
+<h3>Sydney - YSSY</h3>
+<h3>Rotorua - NZRO</h3>
+<h3>Tuuta - NZCI</h3>
+<h3>Claris - NZGB</h3>
+<h3>Lake Tekapo - NZTL</h3>
+
+<form action="searcheddesti/" method="post">
+{% csrf_token %}
+Destination:<br>
+<input name="destination" value="YSSY">
+<br><br>
+<input type="submit" value="Submit">
+</form>
+</body>
+<a href="/">Go Back to Main Page</a>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	body {
+	  background-image: url('/static/invoice.jpg');
+	  background-repeat: no-repeat;
+	  background-attachment: fixed;
+	  background-size: 100% 100%;
+	}
+	th,td{
+		background-color: floralwhite;
+	}
+</style>
+</head>
+<body>
+
+<h1>Invoice</h1>
+<h2>Your flight has been booked. Thank you for using our airline</h2>
+<h2>Booking Reference Number - {{booking.id}}</h2>
+
+<table border='1'>
+	<tr>
+		<th>Reference Number</th>
+		<th>Departure</th>
+		<th>Destination</th>
+		<th>Flight Name</th>
+		<th>Capacity</th>
+		<th>Date</th>
+		<th>Departure Time</th>
+		<th>Arrival Time</th>
+		<th>Price</th>
+		<th>Flight ID</th>
+	</tr>
+
+	<tr>
+		<td>{{booking.id}}</td>
+		<td>{{booking.departure}}</td>
+		<td>{{booking.destination}}</td>
+		<td>{{booking.flightName}}</td>
+		<td>{{booking.capacity}}</td>
+		<td>{{booking.date}}</td>
+		<td>{{booking.departureTime}}</td>
+		<td>{{booking.arrivalTime}}</td>
+		<td>{{booking.price}}</td>
+		<td>{{booking.scheduleID}}</td>
+	</tr>
+</table>
+<a href="/">Go Back to Main Page</a>
+</body>
+</html>

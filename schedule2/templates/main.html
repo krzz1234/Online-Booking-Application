@@ -1,0 +1,144 @@
+<!--
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Airline Online Booking System</h1>
+
+<h3>
+<a href="search/">Search Flight by dates</a>
+</h3>
+<h3><a href="customer/">customer</a></h3>
+<h3><a href='reference/'>Search Booking Detail</a></h3>
+<h3><a href='cancelation/'>Cancel Booking</a></h3>
+
+<h1>Flight Routes</h1>
+{% load static %}
+<h2>Dairy Flat - Claris</h2>
+<p><img width=400px src="{% static 'Dairyflat-Claris.gif' %}" />
+	<h2>Dairy Flat - Rotorua</h2>
+<p><img width=400px src="{% static 'Dairyflat-Rotorua.gif' %}" />
+	<h2>Dairy Flat - Rotorua - Sydney</h2>
+<p><img width=400px src="{% static 'Dairyflat-Sydney.gif' %}" />
+	<h2>Dairy Flat - Lake Tekapo</h2>
+<p><img width=400px src="{% static 'Dairyflat-Tekapo.gif' %}" />
+	<h2>Dairy Flat - Tuuta</h2>
+<p><img width=400px src="{% static 'Dairyflat-Tuuta.gif' %}" />
+
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+<title>Online Airline Booking System</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background: url(/static/background.jpg) ;
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Container for flexboxes */
+section {
+  display: -webkit-flex;
+  display: flex;
+}
+
+/* Style the navigation menu */
+nav {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: #ADD8E6;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Style the content */
+article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  background-color: #f1f1f1;
+  background: url(/static/sky.jpg);
+  padding: 10px;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Airline Online Booking System</h1>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><h3><a href="search/">Search Flight by Dates</a></h3></li>
+      <li><h3><a href="searchdestination/">Search Flight by Destination</a></h3></li>
+      <li><h3><a href='name/'>Search Booking Details with Customer Name</a></h3></li>
+      <li><h3><a href='reference/'>Search Booking Details with Reference Number</a></h3></li>
+      <li><h3><a href='cancelation/'>Cancel Booking</a></h3></li>
+    </ul>
+  </nav>
+  
+  <article>
+  	<h1>Flight Routes</h1>
+
+	<h2>Dairy Flat - Claris</h2>
+	<p><img width=400px src="{% static 'Dairyflat-Claris.gif' %}" />
+		<h2>Dairy Flat - Rotorua</h2>
+	<p><img width=400px src="{% static 'Dairyflat-Rotorua.gif' %}" />
+		<h2>Dairy Flat - Rotorua - Sydney</h2>
+	<p><img width=400px src="{% static 'Dairyflat-Sydney.gif' %}" />
+		<h2>Dairy Flat - Lake Tekapo</h2>
+	<p><img width=400px src="{% static 'Dairyflat-Tekapo.gif' %}" />
+		<h2>Dairy Flat - Tuuta</h2>
+	<p><img width=400px src="{% static 'Dairyflat-Tuuta.gif' %}" />
+  </article>
+</section>
+
+<footer>
+  <p>Footer</p>
+</footer>
+
+</body>
+</html>

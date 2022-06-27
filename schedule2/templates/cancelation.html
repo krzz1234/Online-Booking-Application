@@ -1,0 +1,30 @@
+<html>
+<head>
+	<style>
+body {
+  background-image: url('/static/airplane4.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+  th,td{
+    background-color: floralwhite;
+  }
+</style>
+</head>
+
+<body>
+<h1>Cancelcation</h1>
+
+<h2>Enter a booking reference number that you want to cancel</h2>
+
+<form action="confirmcancelation/" method="post">
+{% csrf_token %}
+Reference Number:<br>
+<input name="reference">
+<br><br>
+<input type="submit" value="Cancel Booking">
+</form>
+<a href="/">Go Back to Main Page</a>
+</body>
+</html>

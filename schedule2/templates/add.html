@@ -1,0 +1,30 @@
+<h1>Add Schedule</h1>
+
+<form action="addrecord/" method="post">
+{% csrf_token %}
+Departure:<br>
+<input name="departure">
+<br><br>
+Destination:<br>
+<input name="destination">
+<br><br>
+Flight Name:<br>
+<input name="flightname">
+<br><br>
+Number of Passengers:<br>
+<input name="capacity">
+<br><br>
+Date:<br>
+<input name="date">
+<br><br>
+Departure Time:<br>
+<input name="departuretime">
+<br><br>
+Arrival Time:<br>
+<input name="arrivaltime">
+<br><br>
+Price:<br>
+<input name="price">
+<br><br>
+<input type="submit" value="Submit">
+</form>

@@ -1,0 +1,27 @@
+<html>
+<head>
+	<style>
+body {
+  background-image: url('/static/airplane6.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
+</head>
+
+<body>
+<h1>Search Booking Details with Customer Name</h1>
+
+<h2>Please enter your name</h2>
+
+<form action="searchname/" method="post">
+{% csrf_token %}
+Customer Name:<br>
+<input name="bookedname">
+<br><br>
+<input type="submit" value="Submit">
+</form>
+<a href="/">Go Back to Main Page</a>
+</body>
+</html>

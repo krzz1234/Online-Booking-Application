@@ -1,0 +1,21 @@
+<h1>Schedule</h1>
+
+<table border="1">
+{% for x in schedule %}
+<tr>
+<td><a href="update/{{ x.id }}">{{ x.id }}</a></td>
+<td>{{ x.departure }}</td>
+<td>{{ x.destination }}</td>
+<td>{{ x.flightName }}</td>
+<td>{{ x.capacity }}</td>
+<td>{{ x.date }}</td>
+<td>{{ x.departureTime }}</td>
+<td>{{ x.arrivalTime }}</td>
+<td>{{ x.price }}</td>
+</tr>
+{% endfor %}
+</table>
+
+<p>
+<a href="add/">Add Schedule</a>
+</p>

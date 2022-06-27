@@ -1,0 +1,52 @@
+<html>
+<head>
+<style>
+body {
+  background-image: url('/static/airplane7.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+	th,td{
+		background-color: floralwhite;
+	}
+</style>
+</head>
+
+<body>
+<h1>Booking Detail</h1>
+{% for x in flight %}
+<h2>Booking Detail for {{x.name}} </h2>
+<h2>Reference Number = {{x.id}}</h2>
+
+<table border='1'>
+	<tr>
+		<th>Reference Number</th>
+		<th>Departure</th>
+		<th>Destination</th>
+		<th>Flight Name</th>
+		<th>Capacity</th>
+		<th>Date</th>
+		<th>Departure Time</th>
+		<th>Arrival Time</th>
+		<th>Price</th>
+		<th>Flight ID</th>
+	</tr>
+
+	<tr>
+		<td>{{x.id}}</td>
+		<td>{{x.departure}}</td>
+		<td>{{x.destination}}</td>
+		<td>{{x.flightName}}</td>
+		<td>{{x.capacity}}</td>
+		<td>{{x.date}}</td>
+		<td>{{x.departureTime}}</td>
+		<td>{{x.arrivalTime}}</td>
+		<td>{{x.price}}</td>
+		<td>{{x.scheduleID}}</td>
+	</tr>
+	{% endfor %}
+</table>
+<a href="/">Go Back to Main Page</a>
+</body>
+</html>

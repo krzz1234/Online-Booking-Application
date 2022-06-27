@@ -1,0 +1,30 @@
+<h1>Update member</h1>
+
+<form action="updaterecord/{{ schedule.id }}" method="post">
+{% csrf_token %}
+Departure:<br>
+<input name="departure" value="{{ schedule.departure }}">
+<br><br>
+Destination:<br>
+<input name="destination" value="{{ schedule.destination }}">
+<br><br>
+Flight Name:<br>
+<input name="flightname" value="{{ schedule.flightName }}">
+<br><br>
+Number of Passengers:<br>
+<input name="capacity" value="{{ schedule.capacity }}">
+<br><br>
+Date:<br>
+<input name="date" value="{{ schedule.date }}">
+<br><br>
+Departure Time:<br>
+<input name="departuretime" value="{{ schedule.departureTime }}">
+<br><br>
+Arrival Time:<br>
+<input name="arrivaltime" value="{{ schedule.arrivalTime }}">
+<br><br>
+Price:<br>
+<input name="price" value="{{ schedule.price }}">
+<br><br>
+<input type="submit" value="Submit">
+</form>
